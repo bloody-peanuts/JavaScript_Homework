@@ -1,0 +1,130 @@
+/* Team 3 Project 3- Ronald Tubman, William Kowal, Christie Cocklin, Justin Hardesty
+/* This file is linked to checkout.html */
+
+/* Main body dimensions */
+#page
+{
+    	width: 100%;
+    	height: 100%;
+}
+
+/* Syle for header bar (title, top) */
+#headerbar
+{
+    	background-image:url(logo.png);
+    	background-repeat: no-repeat;
+    	background-size: 100% 100%;
+    	background-position: center center;
+    	background-color: #ffffff;
+    	display: block;
+    	float: center;
+    	text-align: center;
+    	width: 100%;
+    	height: 10%;
+		margin-bottom: 10px;
+    	border: none;
+}
+
+/* Style for main content input (status, image, link) */
+#cartarea
+{
+    float: center;
+    text-align: center;
+	color: #000000;
+	font-family: Arial, Verdana, sans-serif;
+    border: ridge;
+    /*height: 500px;*/
+    width: 100%;
+	margin-top: 50px;
+	overflow-y: auto;
+	background-color: #ffffff;
+	border-color: #000000;
+}
+
+/* Style for footer section (bottom) */
+#footerArea
+{
+    	float: center;
+    	width: 100%;
+		margin-top: 80px;
+    	text-align: center;
+    	color: #000000;
+    	font-family: Arial, Verdana, sans-serif;
+    	border: ridge;
+    	background-color: #ffffff;
+    	border-color: #000000;
+}
+
+/*main section for an item*/
+#itemDiv
+{
+	float: center;
+	width: 100%;
+	margin-bottom:10px;
+}
+
+/*info for an item*/
+#infoDiv
+{
+	margin-left:10%;
+	clear:left;
+	position: relative;
+	float: left;
+	width:20%;
+	border:solid;
+	margin-bottom:10px;
+	height:180px;
+	padding-top: 10px;
+}
+
+/*price for individual item*/
+#priceDiv
+{
+	position: relative;
+	float: left;
+	width:20%;
+	border:solid;
+	margin-bottom:10px;
+	height:190px;
+	line-height:140px;
+}
+
+/*quantity for individual item*/
+#quantDiv
+{
+	position: relative;
+	float: left;
+	width:20%;
+	border:solid;
+	margin-bottom:10px;
+	height:190px;
+	line-height:140px;
+}
+
+/*total for individual item*/
+#totalDiv
+{
+	position: relative;
+	float: left;
+	width:20%;
+	border:solid;
+	margin-bottom:10px;
+	height:190px;
+	line-height:140px;
+}
+
+/*area for showing totals at bottom*/
+#totalCharges
+{
+	font-size:120%;
+	padding-right:10%;
+	text-align:right;
+}
+
+/*grand total price*/
+#grandTotal
+{
+	background:green;
+	color:white;
+	margin-left:90%;
+}

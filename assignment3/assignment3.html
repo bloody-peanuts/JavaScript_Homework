@@ -1,0 +1,42 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<!-- Bill Kowal -->
+<!-- 2/24/13-->
+<!-- Assignment 3 - To-Do list -->
+<html xmlns = "http://www.w3.org/1999/xhtml">
+   <head>
+      <title>To-Do List Builder</title>
+	  <script type="text/javascript">
+		<!--
+		//Declaration of Variables
+		var itemsCt, listItem;
+		
+		//Determine how many items will be in the list
+		itemsCt = parseInt(window.prompt("Please enter the number of items in your to-do list."));
+		
+		//start the paragraph
+		document.writeln("<ol>");
+		
+		//fill in the list items
+		for(var items = 1; items <= itemsCt; items++) {
+			//Prompt for input
+			listItem = window.prompt("Please enter to-do item number "+items);
+			
+			//Make list item from input
+			document.writeln("<li>"+listItem+"</li>")
+		}		
+		
+		//end the paragraph
+		document.writeln("</ol>");
+		
+		
+		// -->
+	  </script>
+   </head>
+
+   <body>
+   </body>
+</html>
+

@@ -1,0 +1,168 @@
+/* Main body dimensions */
+#page
+{
+    width: 100%;
+    height: 100%;
+}
+
+/* Syle for header bar (title, top) */
+#headerBar
+{
+    background-image: url(iWitnessLogo.jpg);
+	background-repeat: no-repeat;
+	background-size: 50% auto;
+	background-position: center center;
+	background-color: #666600;
+	display: block;
+    float: left;
+    text-align: center;
+    width: 100%;
+    height: 10%;
+    border: ridge;
+	border-color: #ffffee;
+}
+
+#headerBar h1
+{
+    padding: 0px;
+    font-size: 40px;
+	font-family: Arial, Verdana, sans-serif;
+	color: #ffffee;
+    margin-bottom: 0px;
+}
+
+/* Style for top left section, profile information input */
+#profile
+{
+	overflow: auto;
+    float: left;
+    width: 37%;
+    height: 265px;
+    text-align: center;
+	color: #666600;
+	font-family: Arial, Verdana, sans-serif;
+    border: ridge;
+	background-color: #ffffee;
+	border-color: #ffffdd;
+}
+
+/* Style for "Name," "Image," and "About You" text areas */
+#profile label
+{
+    display: inline-block;
+    width: 125px;
+}
+
+#profile input
+{
+    width: 150px;
+}
+
+/* Style for bottom left section, link input and display */
+#linkArea
+{
+    float: left;
+    clear: left;
+    text-align: center;
+	color: #666600;
+	font-family: Arial, Verdana, sans-serif;
+    border: ridge;
+    width: 37%;
+	height: 515px;
+    background-color: #ffffee;
+	border-color: #ffffdd;
+}
+
+/* Style for link input text area */
+#linkArea input
+{
+    width: 200px;
+}
+
+/* Style for "School Link" display */
+#schoolLinkList
+{
+    float: left;
+    clear: none;
+    text-align: center;
+	text-decoration: underline;
+	font-weight: bold;
+	color: #666600;
+	font-family: Arial, Verdana, sans-serif;
+    border: ridge;
+	height: 310px;
+    width: 32%;
+	overflow: auto;
+    background-color: #ffffee;
+	border-color: #ffffdd;
+}
+
+/* Style for "Work Link" display */
+#workLinkList
+{
+    float: left;
+    clear: none;
+    text-align: center;
+	text-decoration: underline;
+	font-weight: bold;
+	color: #666600;
+	font-family: Arial, Verdana, sans-serif;
+    border: ridge;
+	height: 310px;
+    width: 32%;
+	overflow: auto;
+    background-color: #ffffee;
+	border-color: #ffffdd;
+}
+
+/* Style for "Fun Link" display */
+#funLinkList
+{
+    float: left;
+    clear: none;
+    text-align: center;
+	text-decoration: underline;
+	font-weight: bold;
+	color: #666600;
+	font-family: Arial, Verdana, sans-serif;
+    border: ridge;
+	height: 310px;
+    width: 32%;
+	overflow: auto;
+    background-color: #ffffee;
+	border-color: #ffffdd;
+}
+
+/* Style for main content input (status, image, link) */
+#mainContent
+{
+    float: right;
+    text-align: center;
+	color: #666600;
+	font-family: Arial, Verdana, sans-serif;
+    border: ridge;
+    height: 786px;
+    width: 62%;
+	overflow:auto;
+	background-color: #ffffee;
+	border-color: #ffffdd;
+}
+
+/* Style for main content instructions */
+#contentInst
+{
+	font-size: 75%;
+}
+
+/* Style for footer section (bottom) */
+#footerArea
+{
+    float: none;
+    clear: left;
+    text-align: center;
+	color: #ffffee;
+	font-family: Arial, Verdana, sans-serif;
+    border: ridge;
+	background-color: #666600;
+	border-color: #ffffee;
+}

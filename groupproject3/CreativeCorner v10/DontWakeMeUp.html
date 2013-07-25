@@ -1,0 +1,140 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<!--    Team 3 - Ronald Tubman, William Kowal, Christie Cocklin, Justin Hardesty
+        5/2/13
+        Team Project 3 - Creative Corner Page Design
+-->
+<html xmlns = "http://www.w3.org/1999/xhtml">
+   <head>
+      <!-- Links style sheet and javascript files -->
+      <title>Creative Corner - Don't wake me up… </title>
+   <link href="CreativeCorner.css" rel="stylesheet" type="text/css" />
+   <script src="Cart.js" type="text/javascript"></script>
+   <script type="text/javascript">
+   
+   //Set the initial size of the image
+   function initialIMG() {
+		//Set the image size
+		var obj = document.getElementById("currentImg");
+		obj.style.width="200px";
+		obj.style.height="250px";
+		}
+
+	//Mouseover to Scale the image by 2
+		function imageDbl(x){
+		x.style.height="500px";
+		x.style.width="400px";
+		}
+
+	//Mouseout to make the image normal size
+		function imageNrml(x){
+		x.style.height="250px";
+		x.style.width="200px";
+		}		
+	
+	//Switch selected and non-selected tabs
+    function animate_tab(menuId){
+    var no_of_tabs = 3+1;
+    for(i = 1; i < no_of_tabs; i++){
+        menu_id = "menu-0"+i.toString();
+        tab_id  = "tab-0"+i.toString();
+        if(menu_id == menuId){
+            document.getElementById(menu_id).className  = 'selected';
+            document.getElementById(tab_id).style.display = 'block';
+        }
+		else{
+            document.getElementById(menu_id).className  = 'unselected';
+            document.getElementById(tab_id).style.display = 'none';
+			}
+		}
+	}
+	
+	//Function to alert the buyer when "add to cart button" is pressed
+	function addToCart() {
+		//check for empty box and alert if no quantity
+		var quant = orderForm.quantity.value;
+		if (!parseInt(orderForm.quantity.value) > 0) {
+		alert("You need to insert a quantity");
+		}
+		else {
+			//Added by Bill in v6
+			addItem("DontWakeMeUp", orderForm.quantity.value);
+			alert(quant + " Don't wake me up! prints added to cart");
+		}
+		}
+	
+	
+</script>
+   </head>
+
+   <body onload="initialIMG();">
+   <div id="page">
+	 <div id="headerbar">
+	    <h1><br><br><br></br></h1>
+	 </div>
+
+	<!-- Item navigation Area -->
+	 <div id="item">
+		<a href = "CreativeCorner.html"><img src = "home.png"></img></a><br><br>		
+		<a href = "checkout.html"><img src = "cart.png"></img></a>
+	 </div>
+
+	<!-- Item Detail Area -->
+	 <div id="itemmain">
+	 
+		<div id="itemmain-image">
+	    <img onmouseover="imageDbl(this)" onmouseout="imageNrml(this)" src="images\DontWakeMeUp.jpg" alt="Digital"  id="currentImg" /> 
+		</div>
+		
+<div id="tab-menu">
+    <ul>
+        <li id="menu-01" class="selected">
+		<a href="javascript:void(0);" onClick="animate_tab('menu-01');">Product Info</a>
+		</li>
+        <li id="menu-02" class="unselected">
+		<a href="javascript:void(0);" onClick="animate_tab('menu-02');">Reviews</a>
+		</li>
+       <li id="menu-03" class="unselected">
+		<a href="javascript:void(0);" onClick="animate_tab('menu-03');">Q & A</a>
+		</li>
+    </ul>
+    <div id="tab-content">
+        <div id="tab-01">Name: Don't wake me up…</br></br>
+						 Medium: Paper/Pencil </br></br>
+						 Size: 2413px X 2461px </br></br>
+						 DeviantArt Theme: Cartoons & Comics, Traditional Media</br></br>
+						 Creation Date: 9/8/2008 </br></br>
+		</div>
+        <div id="tab-02"></br> I have every piece created by this artist. Here's another example of what makes her work fun, 
+						and greatly appreciated. I think that's a portrait of what I look like after eating too much on Thanksgiving.... 
+						</br>
+						 - Joseph Joseph .</br></br></div>
+        <div id="tab-03">What was your inspiration for this piece?</br></br>
+						 <i>Some kid I saw sleeping once</i></br></br>
+						 Do I have the right to reproduce this if I buy it?</br></br>
+						 <i>Sure, do whatever you want.</i></br></br>
+						 Will you ship to Alaska & Hawaii?</br></br>
+						 <i>Yup, but you're going to pay a ton!</i></br></br></div>
+		<div>
+			<form name="orderForm" action="" method="post" action="javascript" enctype="text/plain" onsubmit="addToCart();">
+			Quantity: <input type="text" name="quantity" size="5">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<input type="submit" value="Add to cart">
+			</form>
+		</div>
+	</div>
+</div>
+ </div>
+
+		<!-- Footer Area -->
+      <div id="footerArea">
+      	&copy; 2013 &mdash; R. Tubman &#124; W. Kowal &#124; J. Hardesty &#124; C. Cocklin
+      </div>
+   </div>
+   </body>
+ </html>
+ <script>
+ menu_id = "menu-0"+i.toString();
+ tab_id  = "tab-0"+i.toString();
+ </script>

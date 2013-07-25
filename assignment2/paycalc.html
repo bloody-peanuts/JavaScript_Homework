@@ -1,0 +1,50 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<!-- Bill Kowal -->
+<!-- [date] -->
+<!-- [description] -->
+<html xmlns = "http://www.w3.org/1999/xhtml">
+   <head>
+      <title>Pay Calc</title>
+	  <script type = "text/javascript">
+		<!--
+		var hours, wage;
+		var otpay, pay, ihours, iwage, totpay, otwage, othours;
+		
+		//ask the user for input
+		hours = window.prompt("Please enter the number of hours worked.");
+		wage = window.prompt("Please enter your rate of pay.");
+		
+		ihours = parseInt(hours);
+		iwage = parseInt(wage);
+		
+		if (ihours > 40){
+			othours = ihours-40;
+			otwage = iwage*1.5
+			otpay = othours*otwage;
+			totpay = (iwage*40)+ otpay;
+			document.writeln(
+				"<p>You worked a total of "+ihours+
+				" hours at a rate of $"+iwage+
+				" for a total pay of $"+totpay+".</p>");
+			document.writeln(
+				"<p>Of that, "+othours+" hours were at an increased rate of $"+otwage+
+				" per hour, for a total of $"+otpay+" in overtime pay.</p>");
+		}else{
+			totpay = ihours*iwage;
+			document.writeln(
+				"<p>You worked a total of "+ihours+
+				" hours at a rate of $"+iwage+
+				" for a total pay of $"+totpay+".</p>");
+		}
+		
+		// -->
+	  </script>
+   </head>
+
+   <body>
+   </body>
+</html>
+

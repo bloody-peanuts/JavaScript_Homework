@@ -1,0 +1,15 @@
+#profile
+{
+    text-align: center;
+}
+
+#profile label
+{
+    display: inline-block;
+    width: 75px;
+}
+
+#profile input
+{
+    width: 100px;
+}

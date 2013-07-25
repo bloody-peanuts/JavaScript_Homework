@@ -1,0 +1,512 @@
+/* Team 3 - Justin Hardesty, William Kowal, Matthew Mullen, Christie Cocklin
+ * Client-Side Scripting Languages
+ * Team Project 1
+ * External style sheet for Team Project 1 page - includes Print styles
+ * 2/08/13
+*/
+
+/* General styles */
+
+
+/* Sets font for page, small-caps */
+body
+{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-variant: small-caps;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* Sets elements as blocks */
+header,blockquote,div,aside,footer
+{
+    display: block;
+}
+
+/* Main content width, centering */
+#mainSection
+{
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* Removes underlines from links, sets color to black */
+a:link
+{
+    text-decoration: none;
+    color: black;
+}
+
+/* All links underlined at hover */
+a:hover
+{
+    text-decoration: underline;
+}
+
+/* Header style */
+header
+{
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* Logo styles */
+header img
+{
+    margin-top: 5px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Nav styles */
+header nav
+{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+/* Nav anchor styles */
+header nav a
+{
+    clear: none;
+    color: black;
+    text-align: center;
+    border: groove;
+    float: left;
+    padding-left: 5px;
+    padding-right: 5px;
+    font-size: large;
+}
+
+/* Nav hover event style */
+header nav a:hover
+{
+    background-color: orange;
+    text-decoration: none;
+}
+
+/* Top set of nav links */
+#topNav
+{
+    float: left;
+    clear: none;
+    width: 56%;
+    margin-left: 24%;
+    margin-right: auto;
+}
+
+/* Bottom set of nav links */
+#bottomNav
+{
+    float: left;
+    clear: left;
+    margin-bottom: 5px;
+    width: 67%;
+    margin-left: 19%;
+    margin-right: auto;
+}
+
+/* Sets color of links hover */
+#mainSection a:link:hover
+{
+    color: #0000CC;
+}
+
+/* Block quote style */
+blockquote
+{
+    width: 96%;
+    clear: left;
+    float: left;
+    text-align: center;
+    font-style: italic;
+    color: #FF2800;
+    padding-top: 5px;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+}
+
+/* Quote author citation */
+#citation
+{
+    font-style: normal;
+    color: black;
+    font-size: small;
+    text-align: right;
+    padding-right: 50px;
+}
+
+/* Published authors section */
+#authors
+{
+    float: left;
+    width: 18%;
+    border-bottom: solid;
+    border-color: #6600CC;
+}
+
+/* Seperates list items on authors section */
+#authors li
+{
+    padding-bottom: 5px;
+}
+
+/* Bottom of authors list */
+#authors li:last-of-type
+{
+    padding-bottom: 20px;
+}
+
+/* Authors heading */
+#authors h3
+{
+    color: #CC0000;
+}
+
+/* Authors links */
+#authors a:link.authorLink
+{
+    font-weight: normal;
+    margin-top:10px;
+    margin-bottom: 10px;
+}
+
+/* Authors list */
+#authors ul
+{
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+/* News section */
+#recentHappenings
+{
+    clear: none;
+    float: left;
+    text-align: center;
+    width: 62%;
+    border-top: groove;
+    border-bottom: groove;
+    margin: 0 auto;
+}
+
+/* Recent Happenings heading */
+#recentHappenings h3
+{
+    color: #00CC33;
+}
+
+/* News of Letter Heading */
+h4.letterNotice
+{
+    font-weight: bolder;
+}
+
+/* Time magazine (letter) heading */
+h4.times
+{
+   text-decoration: overline; 
+}
+
+/* Letter Heading */
+#letterHeading
+{
+    background-color: #FFFAE7;
+    padding-bottom: 20px;
+    border-top: groove;
+    border-left: groove;
+    border-right: groove;
+}
+
+/* Scrollable letter due to larger amount of text */
+#openLetter
+{
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    height: 150px;
+    overflow: auto;
+    border: groove;
+    background-color: #FFFAE7;
+}
+
+/* Publications block style */
+#publications
+{
+    clear: none;
+    float: left;
+    text-align: center;
+    width: 62%;
+    border-bottom: groove;
+    margin: 0 auto;
+}
+
+/* Publications heading */
+#publications h3
+{
+    color: #00CC33; 
+}
+
+/* Catalog link */
+#publications a:link.catalog
+{
+    font-weight: bold;
+}
+
+/* Feature articles */
+#featureArticles
+{
+    clear: none;
+    float: right;
+    width: 20%;
+    text-align: center;
+    border-bottom: solid;
+    border-color: #CC0000;
+}
+
+/* Feature article list items separation */
+#featureArticles li
+{
+    padding-bottom: 5px;
+}
+
+/* Sets space between list and border/divider */
+#featureArticles li:last-of-type
+{
+    padding-bottom: 20px;
+}
+
+/* Feature article heading */
+#featureArticles h3
+{
+    color: #6600CC;
+}
+
+/* Removes bullets in list */
+#featureArticles ul
+{
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+/* Reviews section */
+#reviews
+{
+    clear: right;
+    text-align: center;
+    width: 20%;
+    float: right;
+    border-bottom: solid;
+    border-color: #CC0000;
+}
+
+/* Reviews heading */
+#reviews h3
+{
+    color: #6600CC;
+}
+
+/* Reviews list bullets removed */
+#reviews ul
+{
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+/* Separates list items */
+#reviews li
+{
+    padding-bottom: 5px;
+}
+
+/* Separates list from border/divider */
+#reviews li:last-of-type
+{
+    padding-bottom: 20px;
+}
+
+/* E-Magazine section */
+#eMagazine
+{
+    clear: left;
+    width: 18%;
+    float: left;
+    border-bottom: solid;
+    border-color: #6600CC;
+}
+
+/* E-Magazine heading */
+#eMagazine h3
+{
+    color: #CC0000;
+}
+
+/* Removes bullets */
+#eMagazine ul
+{
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+/* Separates list items */
+#eMagazine li
+{
+    padding-bottom: 5px;
+}
+ 
+/* Separates list from border */
+#eMagazine li:last-of-type
+{
+    padding-bottom: 20px;
+}
+
+/* Abbey Book Advertisement */
+aside
+{
+    margin-top: 50px;
+    margin-bottom: 25px;
+    clear: both;
+    float: left;
+    width: 80%;
+    color: white;
+    text-align: center;
+    background-image: url('book.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border: groove;
+    border-top-left-radius: 10px 5px;
+    border-bottom-right-radius: 10px 5px;
+    border-top-right-radius: 10px 5px;
+    border-top-left-radius: 10px 5px;
+    border-bottom-left-radius: 10px 5px;
+    font-style: italic;  
+}
+
+/* Ad heading */
+aside h4
+{
+    background-color: olive;
+    color: black;
+    border-top: groove;
+    border-bottom: groove;
+}
+
+/* Olive green stripes */
+aside p
+{
+    background-color: olive;
+}
+
+/* Bold phone number */
+aside p:last-of-type
+{
+    font-weight: bold;
+}
+
+/* Footer section */
+#pageFooter
+{
+    clear: both;
+    margin-top: 50px;
+    border-top: solid black;
+    font-size: small;
+    text-align: center;
+    width: 100%;
+}
+
+/* Contact info */
+#contactSection
+{
+    text-align: center;
+}
+
+/* Email links */
+#contactSection a:link.contact
+{
+    font-weight: normal;
+}
+
+/* Footer hover effect */
+#contactSection a:link:hover
+{
+    color: #0000CC;
+}
+
+/* Contact paragraph */
+#contactSection p
+{
+    font-weight: bold;
+    color: #CC0000;
+}
+
+/********* Print Styles **********/
+
+@media print
+{
+    /* Remove navigation links in header */
+    header nav
+    {
+        display: none;
+    }
+    
+    /* Reduce width and size of quote */
+    blockquote
+    {
+        width: 94%;
+        font-size: small;
+    }
+    
+    /* Remove news borders and force elements out of way of letter */
+    #recentHappenings
+    {
+        border-bottom: none;
+        border-left: none;
+        border-right: none;
+        margin-bottom: 1000px;
+    }
+    
+    /* Remove borders around heading of letter */
+    #letterHeading
+    {
+        background-color: #FFFAE7;
+        padding-bottom: 10px;
+        border-top: groove;
+        border-left: none;
+        border-right: none;
+    }
+    
+    /* Remove borders around letter, display entirety of letter */
+    #openLetter
+    {
+        overflow: visible;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        border-bottom: none;
+    }
+    
+    /* Place page break to correct flow of content */
+    #featureArticles
+    {
+        page-break-after: always;
+    }
+    
+    /* Center aside/ad */
+    aside
+    {
+        float: none;
+        margin-top: 10px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}

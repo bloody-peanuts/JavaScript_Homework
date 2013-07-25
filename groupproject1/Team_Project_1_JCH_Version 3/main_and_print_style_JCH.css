@@ -1,0 +1,38 @@
+/* Justin Hardesty
+ * Client-Side Scripting Languages
+ * Team Project 1
+ * External style sheet for Team Project 1 page - includes Print styles
+ * 2/08/13
+*/
+
+/* Center Section Styles */
+
+body
+{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+}
+/* Body div question: Justin, do we want everything in the body to be centered? (from Christie) */
+
+#pageHead
+{
+    font-family: "Century Gothic", "Apple Gothic", sans-serif;
+    font-variant: small-caps;
+}
+
+#openLetter
+{
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    width: 98%;
+    height: 100px;
+    overflow: auto;
+    border: 1px black solid;
+}
+
+#recentHappenings
+{
+    border: 2px black groove;  
+}

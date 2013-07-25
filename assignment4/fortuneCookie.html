@@ -1,0 +1,41 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<!-- Bill Kowal -->
+<!-- 3/3/13 -->
+<!-- This assignment uses funtions and random numbers to display fortunes -->
+<html xmlns = "http://www.w3.org/1999/xhtml">
+   <head>
+      <title>Your Fortune Cookie</title>
+	  <link href="fortuneStyles.css" rel="stylesheet" type="text/css" />
+	  <script type = "text/javascript">
+         <!--
+			function randRange(value){
+				return Math.floor(1 + Math.random() * value);
+			}
+			function showFortune() {
+				var fortId = ("fortune" + randRange(4));
+				var fArea = document.getElementById("fortuneArea");
+				var filling = ("<p>" + document.getElementById(fortId).value +
+					"<br />Lucky numbers: <span class='luckies'>" + randRange(60) + " " + randRange(60) + " " + randRange(60)
+					+ " "  + randRange(60) + " "+randRange(60) + " " + randRange(60) + "</span></p>");
+				fArea.innerHTML = filling;
+			}
+         // -->
+      </script>  
+   </head>
+
+   <body>
+		<form action="">
+			<p>
+			<input type="hidden" id="fortune1" value="Time flies like an arrow, fruit flies like banana" />
+			<input type="hidden" id="fortune2" value="Thank you Mario! But our princess is in another castle!" />
+			<input type="hidden" id="fortune3" value="Drive fast, take chances." />
+			<input type="hidden" id="fortune4" value="It's time to kick ass and chew bubble gum... and I'm all outta gum." />
+			<input type="button" value="Show my fortune!" onclick= "showFortune();" />
+			</p>
+		</form>
+		<div id="fortuneArea"></div>
+   </body>
+</html>

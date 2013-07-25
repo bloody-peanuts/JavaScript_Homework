@@ -1,0 +1,123 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<!-- Bill Kowal -->
+<!-- 4/6/13 -->
+<!-- Word Search -->
+<html xmlns = "http://www.w3.org/1999/xhtml">
+   <head>
+      <title>Search and Strike!</title>
+	  <style type="text/css">
+			#search{
+				font: monospace;
+				font-size: large;
+				letter-spacing:5px;
+			}
+	  </style>
+	  <script type = "text/javascript">
+         <!--
+
+			function findWord() {
+				
+				//declare some variables
+				var wordSearch = document.getElementById("search").innerHTML;
+				var strikeString = "";
+				
+				//extract the entered word, converts it to uppercase, and stores it in a
+				//variable. Borrowed from http://www.youtube.com/watch?v=MZjAantupsA
+				var wordUp = document.getElementById("word").value.toUpperCase();
+				
+				//Find the start and end of the word
+				var i = wordSearch.indexOf(wordUp);
+				var end = i + wordUp.length
+				
+				//did they enter anything?
+				if (wordUp == ""){
+					window.alert("Please Enter a Word First!");
+				//is what they entered valid?
+				}else if (i == -1){
+					window.alert("Sorry, that word is not in the puzzle!");
+				//strike the word out
+				}else{
+					strikeString = (wordSearch.substring(0,i)+wordSearch.substring(i,end).strike()+wordSearch.substring(end));
+					document.getElementById("search").innerHTML = strikeString;
+				}
+			}
+			
+			//There was a scorearea div that was unused. Needed to do something with it...
+			function giveHint(){
+			
+				//variables declares
+				var hintCounter = document.getElementById("hintcount");
+				var scores = document.getElementById("scoreArea");
+				
+				//Gives up to 3 hints in order on each button press
+				switch(hintCounter.value)
+				{
+					case "2":
+						scores.innerHTML = "<p>First generation pokemon!</p>";
+						break;
+					case "1":
+						scores.innerHTML = "<p>There are 150 of them.</p>";
+						hintCounter.value = "2";
+						break;
+					case "0":
+						scores.innerHTML = "<p>Gotta find 'em all!</p>";
+						hintCounter.value = "1";
+						break;
+				}
+			}
+			
+         // -->
+      </script>  
+   </head>
+
+   <body>
+		<table> 
+		<tr>
+			<td class="wordSearch" id="search" >
+				<pre>								 
+					PQIVYSAURAVENOMOTHMACHOKE
+					OHWFARFETCHDOAUARCANINESY	 
+					QBELLSPROUTPOLIWHIRLZULCO
+					QKADABRACKSANDSLASHMEOWTH
+					JNCMAGNEMITEOYTENTACRUELA
+					RQQNWEEPINBELLOYSBEEDRILL
+					YKJIGGLYPUFFVSANDSHREWJME
+					DTHGWIGGLYTUFFPSYDUCKXZNK
+					CLOYSTEROMUKTENTACOOLSEEL
+					CHARMELEONIDOQUEENIDORINO
+					CMAGNETONTVICTREEBELSCRLC
+					KOBMACHAMPRPOLIWRATHNWDQB
+					VTSGROWLITHEKANSZPIDGEOTZ
+					CLEFABLESLOWBROXNINETALES
+					ZFDUGTRIOXSQUIRTLEMANKEYN
+					JWARTORTLEVULPIXCATERPIEO
+					VTTVYBUTTERFREESHELLDERVK
+					KAKUNAPIDGEOTTOVENUSAURDY
+					BBXIFGRAVELERIBULBASAURQB
+					GUBCHARIZARDKFLEPRIMEAPEH
+					OPARASECTABRASSLOWPOKEMXQ
+					HBNIDOKINGWFOECHARMANDERX
+					OSIPYBLASTOISEIHRATICATEU
+					ZALAKAZAMKOURAPIDASHGLOOM
+					CCLEFAIRYVILEPLUMEPOLIWAG
+				</pre>
+			</td>
+		</tr>
+		</table>
+		
+		<form action="">
+			<p>
+				<label>Enter the word you've found and press Enter:
+				<input type="text" id="word" />
+				</label>
+				<input type="button" value="Enter" onclick= "findWord();" />
+				<input type="button" value="Hint" onclick= "giveHint();" />
+				<input type="hidden" id="hintcount" value="0" />
+			</p>
+		</form>
+		<div id="scoreArea"></div>
+   </body>
+</html>

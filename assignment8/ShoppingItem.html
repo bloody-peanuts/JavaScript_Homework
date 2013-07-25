@@ -1,0 +1,238 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<!-- Bill Kowal -->
+<!-- 4/13/13 -->
+<!-- Assignment 7 - Shopping page -->
+<html xmlns = "http://www.w3.org/1999/xhtml">
+   <head>
+      <title>Just Sweats</title>
+	  <style  type="text/css">
+		.leftColumn	{	position: relative;
+						float: left
+					}
+		.rightColumn{	position: relative;
+						float: left;
+						padding: 20px;
+						border-width:10px;
+						width: 400px
+					}
+		#quantity	{
+						width: 30px
+					}
+	  </style>
+	  <script type = "text/javascript">
+         <!--
+			var imgArray=["images/red.jpg", "images/black.jpg", "images/gray.jpg"];	//src attributes for images
+			var colorNames=["Firetruck","Blackest Black","Dark Gray"];				//Color names
+			var blockIdArray=["redBlock", "blackBlock", "grayBlock"];				//ids of the color blocks
+			var selectedColorIndex=0;												//initially selected color
+			var intervals;															//Interval variable
+			var intervalCount = 0;													//Counter for intervals
+			
+			//Set the initial size of the image
+			//Set the initial border around the selected color block
+			//CSS attributes must be set programmatically in order to be accessed
+			function initialCSS() {
+				//Set the image size
+				var obj = document.getElementById("currentImg");
+				obj.style.width="192px";
+				obj.style.height="285px";
+				//Set the border style
+				var selectedBlock=document.getElementById(blockIdArray[selectedColorIndex]);
+				selectedBlock.style.borderStyle="solid";
+				selectedBlock.style.borderColor="blue";
+			}
+			
+			//Scale the image by factor
+			//Use the image collection to get the image with ID "currentImg"
+			//Then scale it by factor
+			//Remember that the width and height style properties will look something like "192px", so
+			//you must convert them to an integer to remove the "px", and then when you write them back out
+			//to the style property, you must add "px" back in to the new value
+			function scale(factor){
+				//declare variables
+				var imageList = document.images;
+				var imageToScale;
+				var height;
+				var width;
+				
+				//find image that needs to be scaled
+				imageToScale = imageList.namedItem("currentImg");
+				
+				//parse out numbers from height and width, modify them, and put them back
+				height = parseInt(imageToScale.style.height);
+				width = parseInt(imageToScale.style.width);
+				height *= factor;
+				width *= factor;
+				imageToScale.style.height = height + "px";
+				imageToScale.style.width = width + "px";	
+				intervalCount++;
+				//window.alert(intervalCount);
+				if (intervalCount >= 3){
+					clearInterval(intervals);
+					intervalCount = 0;
+				}
+			}
+			
+			
+			//When the user clicks on a new color,
+			//show the name and sizes available for the current color by appending a child to the "colorArea" div node
+			//You will need to use color to index into a number of arrays
+			//and you'll have to convert the array of 1's and 0's to a String that can be put in a text node
+			function showNameAndSizes(color) {
+			
+				//create the new paragraph node
+				var colorAreaNode = document.getElementById("colorArea");
+				var colorNode = document.createTextNode("Color: "+colorNames[color]);
+				var infoNode = document.createElement("p");
+				infoNode.setAttribute("id","infoNodeArea");
+				infoNode.appendChild(colorNode);
+				
+				//first time through? append a node
+				if (document.getElementById("infoNodeArea") == null)
+				{
+					colorAreaNode.appendChild(infoNode);
+				//already have a sizing node? replace it with a newer, better, faster, stronger one
+				}else{
+					colorAreaNode.replaceChild(infoNode,document.getElementById("infoNodeArea"));
+				}	
+			}
+			
+			//Change the selected color block and the image; show the color name and available sizes
+			function selectColor(color) {
+				//Change to the new image
+				var imageArea=document.getElementById("currentImg");
+				imageArea.src=imgArray[color];
+				
+				//Get the selected color block, deselect, and select the new color block
+				//First deselect the old by setting borderStyle to "none":
+				var selectedBlock=document.getElementById(blockIdArray[selectedColorIndex]);
+				selectedBlock.style.borderStyle="none";
+				
+				//Then select the new:
+				selectedColorIndex = color;
+				selectedBlock=document.getElementById(blockIdArray[selectedColorIndex]);
+				selectedBlock.style.borderStyle="solid";
+				selectedBlock.style.borderColor="blue";
+				
+				
+				//Show color name and available sizes under the selected block:
+				showNameAndSizes(color);
+			}
+			
+			//initial loading of page
+			function loadpage() {
+				initialCSS();
+				selectColor(0);
+			}
+			
+			//check the validity of a submit
+			function checkSubmit() {
+				var quant = parseInt(document.getElementById("quantity").value);
+				if (!quant){
+					window.alert("Please enter a quantity!")
+					return false;
+				}else{
+					if (quant == 1){
+						return confirm("Are you sure you would like to add 1 amazingly awesome, well made, and remarkably under-priced "
+						+document.getElementById("sizes").value+" "+colorNames[selectedColorIndex]+" sweatshirt to your cart?");
+					}else if (quant < 0){
+						window.alert("I'm sorry, but we're trying to sell sweatshirts here, not buy them.");
+						return false;
+					}else{
+						return confirm("Are you sure you would like to add "+quant+" amazingly awesome, well made, and remarkably under-priced "
+						+document.getElementById("sizes").value+" "+colorNames[selectedColorIndex]+" sweatshirts to your cart?");
+					}
+				}
+			}
+			
+			//Expands the picture when mousing over
+			function pictureover(e) {
+				if (!e)
+					var e = window.event;
+				
+				var target = getTarget(e);
+
+				if (target.id == "currentImg"){
+					clearInterval(intervals);
+					if (!intervalCount == 0){
+						intervalCount = 0;
+					}
+					initialCSS();
+					document.getElementById('upsnd').play();
+					intervals = setInterval(function() {scale(1.2599)},200);
+				}
+			}
+			
+			//deflates the picture when mousing out
+			function pictureout(e) {
+				if (!e)
+					var e = window.event;
+				
+				var target = getTarget(e);
+	
+				if (target.id == "currentImg"){
+					clearInterval(intervals);
+					if (!intervalCount == 0){
+						initialCSS();
+						intervalCount = 0;
+					}else{
+						document.getElementById('downsnd').play();
+						intervals = setInterval(function() {scale(1/1.2599)},200);
+					
+					}
+				}
+			}
+			
+			//shamelessly stolen from instructional video
+			function getTarget(e) {
+				if (e.srcElement)
+					return e.srcElement;
+				else
+					return e.target;
+			}
+			
+			//setting up global handlers in traditional ways
+			document.onsubmit = checkSubmit
+			document.onmouseover = pictureover;
+			document.onmouseout = pictureout;
+			
+         // -->
+      </script>  
+   </head>
+
+   <body onload="loadpage()">
+		<div class="leftColumn">
+			<p>
+			<img src="images/red.jpg" id="currentImg" />
+			</p>
+		</div>
+		<div class="rightColumn" >
+			<div id="colorArea">
+				<p>Select color:<br />
+				<img src="images/redBlock.jpg" id="redBlock" onClick="selectColor(0);" /> 
+				<img src="images/blackBlock.jpg" id="blackBlock" onClick="selectColor(1);"/> 
+				<img src="images/grayBlock.jpg" id="grayBlock" onClick="selectColor(2);"/>
+				</p>
+			</div>
+			<form id="cartForm">
+				<label for="quantity">Quantity:</label>
+				<input id="quantity" type="text"/>
+				<label for="sizes">Size:</label>
+				<select id="sizes">
+					<option value="XL" selected>XS</option>
+					<option value="S" selected>S</option>
+					<option value="M" selected>M</option>
+					<option value="L" selected>L</option>
+					<option value="XL" selected>XL</option>
+				</select>
+				</br>
+				<input type="submit" value="Add to cart" onclick="displayProfile()" />
+			</form>
+		</div>
+		<audio id="upsnd" src="images/smb_powerup.wav"></audio>
+		<audio id="downsnd" src="images/smb_powerdown.wav"></audio>
+   </body>
+</html>

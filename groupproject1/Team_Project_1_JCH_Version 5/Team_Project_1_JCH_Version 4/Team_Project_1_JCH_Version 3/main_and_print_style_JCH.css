@@ -1,0 +1,215 @@
+/* Justin Hardesty
+ * Client-Side Scripting Languages
+ * Team Project 1
+ * External style sheet for Team Project 1 page - includes Print styles
+ * 2/08/13
+*/
+
+/* Center Section Styles */
+
+body
+{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-variant: small-caps;
+    width: 100%;
+}
+
+a:link
+{
+    text-decoration: none;
+    color: black;
+}
+
+a:hover
+{
+    text-decoration: underline;
+}
+
+header
+{
+    border-top: solid black;
+    border-bottom: solid black;
+    text-align: center;
+    background-color: rgb(240,240,240);
+}
+
+header img
+{
+    margin-top: 5px;
+}
+
+header nav
+{
+    margin-bottom: 10px;
+}
+
+header nav a
+{
+    width: 100%;
+    margin-right: 5px;
+    color: black;
+    text-align: center;
+    font-size: large;
+}
+
+header nav a:hover
+{
+    background-color: rgb(208,208,208);
+}
+
+blockquote
+{
+    text-align: right;
+    font-style: italic;
+    color: #FF2800;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+}
+
+blockquote footer
+{
+    font-style: none;
+    color: black;
+    font-size: small;
+}
+
+#authors
+{
+    float: left;
+    width: 20%;
+}
+
+#authors h3
+{
+    color: #CC0000;
+}
+
+#authors a:link.authorLink
+{
+    font-weight: normal;
+    margin-top:10px;
+    margin-bottom: 10px;
+}
+
+#authors a:link.contact
+{
+    text-decoration: underline;
+    font-weight: normal;
+}
+#authors a:hover
+{
+    color: #0000CC;
+}
+#authors ul
+ {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+ }
+ 
+ #authors p
+ {
+    font-weight: bold;
+    color: #CC0000;
+ }
+
+#recentHappenings
+{
+    float: left;
+    text-align: center;
+    width: 48%;
+}
+
+#recentHappenings h3
+{
+    color: #00CC33;
+}
+
+#openLetter
+{
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    height: 100px;
+    overflow: auto;
+}
+
+#publications
+{
+    float: left;
+    text-align: center;
+    width: 48%;
+}
+
+#publications h3
+{
+    color: #00CC33; 
+}
+
+#publications a:hover
+{
+    color: #0000CC;
+}
+
+#publications a:link.catalog
+{
+    font-weight: bold;
+}
+
+#featureArticles
+{
+    margin-top: 0px;
+    padding-top: 0px;
+    float: right;
+    width: 20%;
+    text-align: center;
+}
+
+#featureArticles h3
+{
+    color: #6600CC;
+}
+
+#featureArticles ul
+ {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+ }
+#reviews
+{
+    text-align: center;
+    width: 20%;
+}
+
+#reviews h3
+{
+    color: #6600CC;
+}
+
+#reviews ul
+ {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#eMagazine
+{
+    text-align: center;
+    width: 20%;
+}
+
+#eMagazine h3
+{
+    color: #6600CC;
+}
+
+#eMagazine ul
+ {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+ }
+

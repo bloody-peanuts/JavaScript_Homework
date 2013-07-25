@@ -1,0 +1,85 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<!--    Team 3 - Ronald Tubman, William Kowal, Christie Cocklin, Justin Hardesty
+        3/6/13
+        Team Project 2 - iWitness Journal Page Design
+-->
+<html xmlns = "http://www.w3.org/1999/xhtml">
+   <head>
+      <!-- Links style sheet and javascript files -->
+      <title>(Name of art shop)</title>
+   <link href="CreativeCorner.css" rel="stylesheet" type="text/css" />
+   <script type="text/javascript">
+    function animate_tab(menuId){
+    var no_of_tabs = 3+1;
+    for(i = 1; i < no_of_tabs; i++){
+        menu_id = "menu-0"+i.toString();
+        tab_id  = "tab-0"+i.toString();
+        if(menu_id == menuId){
+            document.getElementById(menu_id).className  = 'selected';
+            document.getElementById(tab_id).style.display = 'block';
+        }else{
+            document.getElementById(menu_id).className  = 'unselected';
+            document.getElementById(tab_id).style.display = 'none';
+        }
+    }
+}
+</script>
+   </head>
+
+   <body>
+   <div id="page">
+	 <div id="headerbar">
+	    <h1><br>(Art Shop logo here)</br></h1>
+	 </div>
+
+	<!-- Item navigation Area -->
+	 <div id="item">
+	    <h3>(Navigation area)</h3>
+
+	 </div>
+
+	<!-- Item Detail Area -->
+	 <div id="itemmain">
+	 
+		<div id="itemmain-image">
+	    <img src="images\digital.jpg" alt="Digital" width="400" height="500">
+		</div>
+		
+<div id="tab-menu">
+    <ul>
+        <li id="menu-01" class="selected">
+		<a href="javascript:void(0);" onClick="animate_tab('menu-01');">Product Info</a>
+		</li>
+        <li id="menu-02" class="unselected">
+		<a href="javascript:void(0);" onClick="animate_tab('menu-02');">Reviews</a>
+		</li>
+       <li id="menu-03" class="unselected">
+		<a href="javascript:void(0);" onClick="animate_tab('menu-03');">Q & A</a>
+		</li>
+    </ul>
+    <div id="tab-content">
+        <div id="tab-01">Content in Tab 01 goes here.</div>
+        <div id="tab-02">Content in Tab 02 goes here.</div>
+        <div id="tab-03">Content in Tab 03 goes here.</div>
+    </div>
+</div>
+	
+	</div>
+
+</div>
+	 </div>
+
+		<!-- Footer Area -->
+      <div id="footerArea">
+      	&copy; 2013 &mdash; R. Tubman &#124; W. Kowal &#124; J. Hardesty &#124; C. Cocklin
+      </div>
+   </div>
+   </body>
+ </html>
+ <script>
+ menu_id = "menu-0"+i.toString();
+ tab_id  = "tab-0"+i.toString();
+ </script>

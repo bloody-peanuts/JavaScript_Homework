@@ -1,0 +1,54 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<!-- simple21.html -->
+<!-- Practicing with functions -- a very simple comment processor. -->
+<html xmlns = "http://www.w3.org/1999/xhtml">
+   <head> 
+      <title>Make a Comment!</title>
+      <script type = "text/javascript">
+         <!--
+			//Function to take the name and comment and create a formatted
+			//String that can be rendered in the browser window
+			function makeCommentString(name, comment) {
+				var finalComment;
+				finalComment=	"<p><strong>"+name+"</strong><br />"+
+								comment+"</p>";
+				return finalComment;
+			}
+			
+			//Function that pulls the name and comment out of the document fields
+			//and assembles into a String that is then posted to the document
+			function postComment() {
+				var yourName, yourComment;
+				//Get content from the fields
+				yourName=document.getElementById("nameField").value;
+				yourComment=document.getElementById("commentField").value;
+				//Assemble into a string and post to the document
+				//document.writeln(makeCommentString(yourName,yourComment));
+				document.getElementById("commentsArea").innerHTML+=makeCommentString(yourName,yourComment);
+			}
+         // -->
+      </script>
+   </head>
+	<body>
+		<form action="">
+			<table>
+			<caption>Please enter your username and comment.</caption>
+			<tr><td>
+			<input id="nameField" type="text" />
+			</td></tr>
+			<tr><td>
+			<textarea id="commentField" rows="4" cols="36"></textarea>
+			</td></tr>
+			<tr><td>
+			<input type="button" value="Submit comment" onclick= "postComment();" />
+			<input type="reset" value="Clear" />
+			</td></tr>
+			</table>
+		</form>
+		<div id="commentsArea"></div>
+   </body>
+</html>
+

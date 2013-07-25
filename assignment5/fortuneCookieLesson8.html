@@ -1,0 +1,43 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<!-- Bill Kowal -->
+<!-- 3/29/2013 -->
+<!-- This assignment uses Arrays, funtions, and random numbers to display fortunes  -->
+<html xmlns = "http://www.w3.org/1999/xhtml">
+   <head>
+      <title>Your Fortune Cookie</title>
+	  <link href="fortuneStyles.css" rel="stylesheet" type="text/css" />
+	  <script type = "text/javascript">
+         <!--
+		 //Sets up an array of strings for fortunes, I did not keep count as I wrote these and have no idea how many items are in the array
+		var fortuneArray = ["The road to riches is paved with homework.", "Ignore your previous fortune.", "Avoid taking unnecessary gambles.",
+			"Only listen to this fortune cookie, disregard other fortune telling units", "404: Fortune not found!", "Roses are #FF0000 violets are #0000FF all my base are belong to you",
+			"Luke, I am your father", "A person who never made a mistake never tried anything new.", "Winter is coming.", "My life for Aiur!"]
+		
+		//Takes in a parameter and creates a random number between 1 and that value
+		function randRange(value){
+				return Math.floor(1 + Math.random() * value);
+			}
+			
+		//Fills in the fortune area with a random fortune and 6 random lucky numbers
+		function showFortune() {
+			var fArea = document.getElementById("fortuneArea");
+			var filling = ("<p>" + fortuneArray[randRange(fortuneArray.length) - 1] +
+				"<br />Lucky numbers: <span class='luckies'>" + randRange(60) + " " + randRange(60) + " " + randRange(60)
+				+ " "  + randRange(60) + " "+randRange(60) + " " + randRange(60) + "</span></p>");
+			fArea.innerHTML = filling;
+			}
+			
+         // -->
+      </script>  
+   </head>
+
+   <body>
+		<form action="">
+			<input type="button" value="Show my fortune!" onclick= "showFortune();" />
+		</form>
+		<div id="fortuneArea"></div>
+   </body>
+</html>

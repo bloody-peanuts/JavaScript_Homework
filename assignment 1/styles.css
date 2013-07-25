@@ -1,0 +1,35 @@
+/* styles.css */
+/* Bill Kowal */
+/* style sheet for the homework 1 website */
+
+@media all{
+
+body 			{ width:80%; left: 10%; position:relative; color:brown}
+
+img                           { position:absolute; top:200px; left:450px; width:320px; height:240px; }
+
+form				{ text-align: right }
+
+div.rela			{ position:relative; top: 0; right: 0; height:240px; }
+
+div.table                { left:30px }
+
+h2                             {text-align: center }
+
+a:hover                   { text-decoration: none; font-weight: bold }
+}
+@media print{
+body 			{ width:80%; left: 10%; position:relative; color:black}
+
+form				 { text-align: right }
+
+img                            { position:absolute; top:10px; left:450px; width:320px; height:240px; }
+
+div.rela			 { position:relative; top: 0; right: 0; width:320px; height:240px; }
+
+tbody                        { left:30px }
+
+h2                             {text-align: center }
+
+a:hover                   { text-decoration: none; font-weight: bold }
+}
