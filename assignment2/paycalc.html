@@ -3,13 +3,14 @@
    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 
 <!-- Bill Kowal -->
-<!-- [date] -->
-<!-- [description] -->
+<!-- Calculates pay based on user input of pay rate and hours. -->
+
 <html xmlns = "http://www.w3.org/1999/xhtml">
    <head>
       <title>Pay Calc</title>
 	  <script type = "text/javascript">
 		<!--
+		//declare variables
 		var hours, wage;
 		var otpay, pay, ihours, iwage, totpay, otwage, othours;
 		
@@ -17,9 +18,11 @@
 		hours = window.prompt("Please enter the number of hours worked.");
 		wage = window.prompt("Please enter your rate of pay.");
 		
+		//parse integers from input
 		ihours = parseInt(hours);
 		iwage = parseInt(wage);
 		
+		//Check if eligible for overtime and calculate pay
 		if (ihours > 40){
 			othours = ihours-40;
 			otwage = iwage*1.5
